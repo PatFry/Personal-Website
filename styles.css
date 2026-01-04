@@ -14,7 +14,7 @@ body{
   background: #020403;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1{
@@ -23,6 +23,7 @@ h1{
 }
 h2{
   font-size: var(--t2);
+  color: rgb(240, 245, 243);
 }
 h3{
   font-size: var(--t3);
@@ -89,19 +90,20 @@ a{
   aspect-ratio: 1/0.5;
 }
 
-.project-responsive{
-  width: 18vw;
-  aspect-ratio: 1/2.1;
+.project-image{
+  width: 28vw;
+  align-content: center;
+  aspect-ratio: 1/1.55;
   border-radius: 23px;
   object-fit: cover;
-  position: absolute;
+  position: relative;
   z-index: 1;
 }
 
 .project-card{
-  width: 20vw;
+  width: 30vw;
   background: #07182E;
-  aspect-ratio: 1/2;
+  aspect-ratio: 1/1.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,26 +112,44 @@ a{
   overflow: hidden;
 }
 
-.project-card::before{  
-  content: '';
-  width: 10vw;
-  aspect-ratio: 1/5;
+.project-card-colors{
+  width: 15vw;
+  aspect-ratio: 1/4;
   position: absolute;
+  border-radius: 50px;
   background-image: linear-gradient(#FF80FF 0%, #3487C7 100%);
-  animation: cardRotate 5s linear infinite;
-  transition: all 0.2s linear;
+  transform: rotate(-30deg);
 }
 
-.project-card::after{
-  content: "";
-  background: #07182E;
-  position: absolute;
-  border-radius: 30px;
+.spin-fast{
+  animation: fast 1s cubic-bezier(.4,.82,.5,.94);
 }
 
-@keyframes cardRotate{
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
+.spin-slow{
+  animation: slow 4.5s linear infinite;
+}
+
+.project-card.big-card{
+  transform: scale(1.5);
+  z-index: 2;
+}
+
+@keyframes fast{
+  from { 
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(330deg);
+  }
+}
+
+@keyframes slow{
+  from { 
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(330deg);
+  }
 }
 
 #about{
@@ -148,6 +168,36 @@ a{
   object-fit: cover;
 }
 
+#my-pic{
+  width: 30vw;
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  object-fit: cover;
+  box-shadow: -10px -10px 30px -10px pink,
+  10px 10px 30px -10px lightblue;
+  animation: breathe 10s linear infinite;
+}
+
+@keyframes breathe{
+  0%{
+    box-shadow: 0px 0px 30px 10px pink;
+  }
+  25%{
+    box-shadow: -20px -20px 20px -10px pink,
+    20px 20px 20px -10px lightblue;
+  }
+  50%{
+    box-shadow:0px 0px 20px 10px lightblue;
+  }
+  75%{
+    box-shadow: 20px -20px 20px -10px pink,
+    -20px 20px 20px -10px lightblue;
+  }
+  100%{
+    box-shadow: 0px 0px 30px 10px pink;
+  }
+}
+
 #footer{
   display: flex;
   justify-content: space-between;
@@ -159,44 +209,4 @@ a{
 
 
 /*************** PROJECTS PAGE *******************/
-
-.projectSun{
-  width: 30vw;
-  aspect-ratio: 1/1;
-  background: url(assets/noise-light.png), radial-gradient(circle, #015ba0, #006CBC);
-  border-radius: 50%;
-  box-shadow: 0 0 60px 35px #277fc2 inset, 0 0 80px 5px #277fc2, 0 0 50px 20px #006CBC, 0 0 60px 20px #1A63C0,  0 0 400px 100px #006CBC;
-  position: absolute;
-  z-index: -2;
-}
-
-/*trapezoid clip path*/
-/* clip-path: polygon(80% 20%, 65% 20%, 60% 25%, 40% 25%, 35% 20%, 20% 20%, 0% 100%, 100% 100%); */
-/*upside down trap*/
-/* clip-path: polygon(80% 20%, 65% 20%, 60% 25%, 40% 25%, 35% 20%, 20% 20%, 0% 0%, 100% 0%); */
-
-.windowGlass{
-  background-color: transparent;
-  width: var(--mask-width);
-  height: 105dvh;
-  position: absolute;
-  box-shadow: inset 5px 5px 20px 0px rgba(0, 108, 188, 1);
-  border-radius: 250px;
-  /* left: 10%; */
-  top: -3dvh;
-}
-
-.windowPane{
-  width: var(--mask-width);
-  height: 105dvh;
-  position: absolute;
-  /* outline: 10px solid #717E82; */
-  box-shadow: 0 0 5px 10px white,
-  0 0 50px 100px #717E82,
-  0 0 1px 300px black;
-  border-radius: 250px;
-  /* left: center; */
-  top: -3dvh;
-}
-
 

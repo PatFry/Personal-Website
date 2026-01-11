@@ -19,10 +19,6 @@ projectCard.forEach(card => {
             color.removeEventListener('animationend');
         });
     });
-
-    card.addEventListener('click', () => {
-        
-    });
 });
 
 projectCard.forEach(card => {

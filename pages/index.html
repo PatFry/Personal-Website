@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../styles.css" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "Sx6dNpSSZ6TVDsSg7",
+          });
+      })();
+    </script>
     <title>Patrick Fry's Portfolio</title>
   </head>
   <body>
@@ -44,43 +54,37 @@
     </section>
     <section id="projects">
       <div class="project-row">
-        <div class="project-card">
-          <div class="project-card-colors"></div>
-          <a href="SpaceInvaders.html">
-            <img src="../assets/space-Invaders.jpg" alt="HER Pawn Game Picture" class="project-image">
-          </a>
-        </div>
+        <!-- <div class="project-card"> -->
+        <!-- <div class="project-card-colors"></div> -->
+        <img src="../assets/space-Invaders.jpg" alt="HER Pawn Game Picture" class="project-image">
+        <!-- </div> -->
         <div class="project-text">
-          <h3>Space Invaders Clone</h3>
-          <p>Lead a group to create a clone of the iconic arcade game,
+          <h3><i>Space Invaders Clone</i><br><br></h3>
+          <h3>
+            Lead a group to create a clone of the iconic arcade game,
             Space Invaders, using Java/JavaFX. This version uses a 
             client/server to allow for muliplayer!
-          </p>
+          </h3>
         </div>
       </div>
       <div class="project-row">
-        <div class="project-text">
-          <h3>CAS Research</h3>
-          <p> Using Python</p>
+        <div class="project-text-alt">
+          <h3><i>CAS Research</i><br><br></h3>
+          <p>Used python the simulate CAS</p>
         </div>
-        <div class="project-card">
-          <div class="project-card-colors"></div>
-          <a href="HER.html">
-            <img src="../assets/chess.jpeg" alt="HER Pawn Game Picture" class="project-image">
-          </a>
-        </div>
-        
+        <!-- <div class="project-card"> -->
+        <!-- <div class="project-card-colors"></div> -->
+        <img src="../assets/soccer.jpg" alt="Soccer CAS Picture" class="project-image">
+        <!-- </div> -->
       </div>
       <div class="project-row">
-        <div class="project-card">
-          <div class="project-card-colors"></div>
-          <a href="CAS.html">
-            <img src="../assets/soccer.jpg" alt="Soccer CAS Picture" class="project-image">
-          </a>
-        </div>
+        <!-- <div class="project-card"> -->
+        <!-- <div class="project-card-colors"></div> -->
+        <img src="../assets/chess.jpeg" alt="HER Pawn Game Picture" class="project-image">
+        <!-- </div> -->
         <div class="project-text">
-          <h3>HER Pawn Game</h3>
-          <p>hola</p>
+          <h3><i>HER Pawn Game</i><br><br></h3>
+          <h3>hola</h3>
         </div>
       </div>
     </section>
@@ -100,6 +104,34 @@
           I have loved teaching myself web development.
         </p>
       </div>
+    </section>
+    <section id="Contact">
+      <div id="contact-text">
+        <h2>Let's work together!</h2>
+      </div>
+      <form class="contact-form" onsubmit="return sendEmail();">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Name" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="name" placeholder="Email" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Message" required></textarea>
+        </div>
+        <br>
+        <input type="submit">
+      </form>
     </section>
     <section id="footer">
       <div>

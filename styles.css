@@ -1,14 +1,14 @@
 
 :root {
-  --t1: clamp(3rem, calc(5vw + 1rem), 4rem);
-  --t2: clamp(2rem, calc(4vw + 1rem), 3rem);
-  --t3: clamp(1.25rem, calc(2vw + 1rem), 2rem);
-  --par: clamp(0.75rem, calc(0.01vw + 1rem), 1.25rem);
+  --t1: clamp(3rem, calc(3vw + 1rem), 4rem);
+  --t2: clamp(1.5rem, calc(1vw + 1rem), 2rem);
+  --t3: clamp(1rem, calc(0.2vw + 1rem), 1.5rem);
+  --par: clamp(0.90rem, calc(0.05vw + 1rem), 1.25rem);
 }
 
 body{
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  font-family: Urban;
+  font-family: "Monaco", monospace;
   /* background-color: #0b1a36; */
   background: #050E14;
   margin: 0;
@@ -89,8 +89,8 @@ a{
   aspect-ratio: 1/1;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: -10px -10px 30px -10px pink,
-  10px 10px 30px -10px lightblue;
+  /* box-shadow: -10px -10px 30px -10px pink,
+  10px 10px 30px -10px lightblue; */
   animation: breathe 10s linear infinite;
 }
 
@@ -119,50 +119,61 @@ a{
   /* height: 100vh; */
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .project-row{
   display: flex;
   justify-content: center;
-  gap: 5rem;
-  text-align: center;
+  gap: 2rem;
 }
 
 .project-text{
-  width: 40vw;
+  width: 35vw;
+  text-align: right;
+}
+.project-text-alt{
+  width: 35vw;
 }
 
 .project-image{
-  width: 38vw;
-  aspect-ratio: 1/0.75;
-  border-radius: 30px;
+  width: 25vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
   object-fit: cover;
   position: relative;
-  translate: 0px 3px;
   z-index: 1;
+  animation: breathe 10s linear infinite;
 }
 
+/* not being used */
 .project-card{
-  width: 40vw;
-  background: #07182E;
+  width: 35vw;
+  /* background: #07182E; */
+  background: transparent;
   aspect-ratio: 1/0.75;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 10%;
   position: relative;
   overflow: hidden;
+  animation: breathe 10s linear infinite;
 }
 
-.project-card-colors{
+.project-row:nth-child(1) .project-image {animation-delay: 0s;}
+.project-row:nth-child(2) .project-image {animation-delay: -3s;}
+.project-row:nth-child(3) .project-image {animation-delay: -6s;}
+
+
+/* .project-card-colors{
   width: 15vw;
   aspect-ratio: 1/4;
   position: absolute;
   border-radius: 50px;
   background-image: linear-gradient(#FF80FF 0%, #3487C7 100%);
   transform: rotate(-30deg);
-}
+} */
 
 .spin-fast{
   animation: fast 1s cubic-bezier(.4,.82,.5,.94);
@@ -173,7 +184,7 @@ a{
 }
 
 .project-card.big-card{
-  transform: scale(1.5);
+  transform: scale(1.1);
   z-index: 2;
 }
 
@@ -207,6 +218,26 @@ a{
 
 .about-text{
   width: 40vw;
+}
+
+#contact-text{
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #footer{

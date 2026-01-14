@@ -7,7 +7,6 @@ projectCard.forEach(card => {
     card.addEventListener('mouseenter', () => {
         color.classList.add('spin-fast');
         card.classList.add('big-card');
-        // card.style.transform = "scale(1.5)";
 
         color.addEventListener('animationend', () => {
             color.classList.remove('spin-fast');
@@ -28,3 +27,17 @@ projectCard.forEach(card => {
         card.classList.remove('big-card');
     });
 });
+
+
+function sendEmail(){
+    let params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_g1rcb6q", "template_5ydv8fm", params).then(alert("Email Sent"));
+    return false;
+
+}

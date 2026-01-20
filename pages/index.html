@@ -22,30 +22,33 @@
         <a href="#top"><p>HOME</p></a>
       </div>
       <div>
-        <a href="projects.html"><p>PROJECTS</p></a>
+        <a href="#projects"><p>PROJECTS</p></a>
       </div>
       <div>
         <a href="#about"><p>ABOUT</p></a>
       </div>
       <div>
-        <a href="#footer"><p>CONTACT</p></a>
+        <a href="#contact"><p>CONTACT</p></a>
       </div>
     </section>
     <section id="hero">
         <div class="hero-text">
           <h3>
-            Hello, I'm
+            Hello, my name is
           </h3>
           <h1>
             Patrick Fry
           </h1>
           <h3>
             And I am a Frontend developer
+            <br><br>
           </h3>
           <p>
-            I am Web Designer with a bachelor's in computer science
-            and 3+ years of experience working with various programming 
-            languages such as HTML, CSS, Javascript, Java, Python 
+            Computer Science graduate with experience building 
+            web applications and software projects using Java, Python, 
+            and modern web technologies. I enjoy solving problems, designing 
+            responsive user interfaces, and turning ideas into functional, 
+            well-structured code.
           </p>
         </div>
         <div>
@@ -53,94 +56,143 @@
         </div>
     </section>
     <section id="projects">
-      <div class="project-row">
+
+      <!-- Title -->
+      <div class="section-title">
+        <h2>My Work</h2>
+        <div>
+          <hr class="section-divider">
+        </div>
+      </div>
+
+      <!-- Project 1 -->
+      <div class="project-row-alt">
         <!-- <div class="project-card"> -->
         <!-- <div class="project-card-colors"></div> -->
         <img src="../assets/space-Invaders.jpg" alt="HER Pawn Game Picture" class="project-image">
         <!-- </div> -->
-        <div class="project-text">
-          <h3><i>Space Invaders Clone</i><br><br></h3>
+        <div class="project-text-alt">
+          <h2><i>Space Invaders Clone</i><br><br></h2>
           <h3>
-            Lead a group to create a clone of the iconic arcade game,
+            Led a group to create a clone of the iconic arcade game,
             Space Invaders, using Java/JavaFX. This version uses a 
-            client/server to allow for muliplayer!
+            client/server to allow for online muliplayer!
+            <br><br>
           </h3>
+          <h3 class="project-dark-text">
+            Java, JavaFX
+            <br><br>
+          </h3>
+          <a href="https://github.com/PatFry/SpaceInvaders" target="_blank">
+            <img src="../assets/github-mark-white.png" alt="GitHub" width="24" height="24">
+          </a>
         </div>
       </div>
+
+      <!-- Project 2 -->
       <div class="project-row">
-        <div class="project-text-alt">
-          <h3><i>CAS Research</i><br><br></h3>
-          <p>Used python the simulate CAS</p>
+        <div class="project-text">
+          <h2>
+            <i>CAS Research</i>
+            <br><br>
+          </h2>
+          <h3>
+            Investigated how player density and field size influence a teams 
+            decision making and performance using a soccer simulation(STS2) 
+            created by EA.
+            <br><br>
+          </h3>
+          <h3 class="project-dark-text">
+            Python, Overleaf
+            <br><br>
+          </h3>
+          <a href="https://github.com/PatFry/CS423-Project-3" target="_blank">
+            <img src="../assets/github-mark-white.png" alt="GitHub" width="24" height="24">
+          </a>
         </div>
         <!-- <div class="project-card"> -->
         <!-- <div class="project-card-colors"></div> -->
         <img src="../assets/soccer.jpg" alt="Soccer CAS Picture" class="project-image">
         <!-- </div> -->
       </div>
-      <div class="project-row">
+
+      <!-- Project 3 -->
+      <div class="project-row-alt">
         <!-- <div class="project-card"> -->
         <!-- <div class="project-card-colors"></div> -->
         <img src="../assets/chess.jpeg" alt="HER Pawn Game Picture" class="project-image">
         <!-- </div> -->
-        <div class="project-text">
-          <h3><i>HER Pawn Game</i><br><br></h3>
-          <h3>hola</h3>
+        <div class="project-text-alt">
+          <h2>
+            <i>Hexapawn</i>
+            <br><br>
+          </h2>
+          <h3>
+            Developed a psuedo-AI bot that you can play against 
+            in a game of Hexapawn where the bot will eventually
+            become unbeatable.
+            <br><br>
+          </h3>
+          <h3 class="project-dark-text">
+            Java, JavaFX
+            <br><br>
+          </h3>
+          <a href="https://github.com/PatFry/HER" target="_blank">
+            <img src="../assets/github-mark-white.png" alt="GitHub" width="24" height="24">
+          </a>
         </div>
       </div>
     </section>
     <section id="about">
-      <div>
-        <img src="../assets/ME-Crop.jpeg" alt="Picture of Patrick" id="my-pic">
+      <div class="section-title">
+        <h2>About Me</h2>
+        <div>
+          <hr class="section-divider">
+        </div>
       </div>
-      <div class="about-text">
-        <h2>
-          More about me!
-        </h2>
-        <p>
-          I was originally born in the Florida Panhandle and after
-          spending some time in Portales, NM, I decided to move to 
-          Albuqueruque to study computer science at UNM. I love
-          to play my guitar, sand volleyball and since graduating 
-          I have loved teaching myself web development.
-        </p>
+      <div class="about-row">
+        <div>
+          <img src="../assets/ME-Crop.jpeg" alt="Picture of Patrick" id="my-pic">
+        </div>
+        <div class="about-text">
+          <p>
+            I was originally born in the Florida Panhandle and after
+            spending some time in Portales, NM, I decided to move to 
+            Albuqueruque to study computer science at UNM. I love
+            to play my guitar, sand volleyball and since graduating 
+            I have loved teaching myself web development.
+          </p>
+        </div>
       </div>
     </section>
-    <section id="Contact">
-      <div id="contact-text">
-        <h2>Let's work together!</h2>
-      </div>
+    <section id="contact">
       <form class="contact-form" onsubmit="return sendEmail();">
+        <div id="contact-text">
+          <h2><br>Let's work together!</h2>
+        </div><br><br>
         <div class="form-group">
-          <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Name" required>
-        </div>
-        <br>
+        </div><br>
         <div class="form-group">
-          <label for="email">Email:</label>
           <input type="email" id="email" name="name" placeholder="Email" required>
-        </div>
-        <br>
+        </div><br>
         <div class="form-group">
-          <label for="subject">Subject:</label>
           <input type="text" id="subject" name="subject" placeholder="Subject" required>
-        </div>
-        <br>
+        </div><br>
         <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" placeholder="Message" required></textarea>
-        </div>
-        <br>
-        <input type="submit">
+          <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+        </div><br>
+        <input type="submit"><br>
       </form>
-    </section>
-    <section id="footer">
-      <div>
-        <p>patrickfry3@gmail.com</p>
-      </div>
-      <div>
-        <a href="https://github.com/PatFry" target="_blank">
-          <img src="../assets/github-mark-white.png" alt="GitHub" width="24" height="24">
-        </a>
+      <div class="footer">
+        <div>
+          <p>patrickfry3@gmail.com</p>
+        </div>
+        <div>
+          <a href="https://github.com/PatFry" target="_blank">
+            <img src="../assets/github-mark-white.png" alt="GitHub" width="24" height="24">
+          </a>
+        </div>
       </div>
     </section>
     <script src="../script.js"></script>

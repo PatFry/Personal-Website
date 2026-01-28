@@ -1,32 +1,41 @@
 const projectCard = document.querySelectorAll('.project-card');
+const submitButton = document.querySelector('input[type="submit"]');
 
-
-projectCard.forEach(card => {
-    const color = card.querySelector('.project-card-colors');
-
-    card.addEventListener('mouseenter', () => {
-        color.classList.add('spin-fast');
-        card.classList.add('big-card');
-
-        color.addEventListener('animationend', () => {
-            color.classList.remove('spin-fast');
-
-            if(card.matches(':hover')){
-                color.classList.add('spin-slow');
-            }
-
-            color.removeEventListener('animationend');
-        });
-    });
+submitButton.addEventListener('mouseenter', () => {
+    submitButton.classList.add('big-button');
 });
 
-projectCard.forEach(card => {
-    const color = card.querySelector('.project-card-colors');
-    card.addEventListener('mouseleave', () => {
-        color.classList.remove('spin-fast','spin-slow');
-        card.classList.remove('big-card');
-    });
-});
+submitButton.addEventListener('mouseleave', () => {
+    submitButton.classList.remove('big-button');
+})
+
+// projectCard.forEach(card => {
+//     const color = card.querySelector('.project-card-colors');
+
+//     card.addEventListener('mouseenter', () => {
+//         color.classList.add('spin-fast');
+//         card.classList.add('big-card');
+
+//         color.addEventListener('animationend', () => {
+//             color.classList.remove('spin-fast');
+
+//             if(card.matches(':hover')){
+//                 color.classList.add('spin-slow');
+//             }
+
+//             color.removeEventListener('animationend');
+//         });
+//     });
+// });
+
+// projectCard.forEach(card => {
+//     const color = card.querySelector('.project-card-colors');
+//     card.addEventListener('mouseleave', () => {
+//         color.classList.remove('spin-fast','spin-slow');
+//         card.classList.remove('big-card');
+//     });
+// });
+
 
 
 function sendEmail(){

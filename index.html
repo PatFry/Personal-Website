@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "Sx6dNpSSZ6TVDsSg7",
+          });
+      })();
+    </script>
+    <title>Patrick Fry's Portfolio</title>
+  </head>
+  <body>
+    <section id="navbar">
+      <div>
+        <a href="#top"><p>HOME</p></a>
+      </div>
+      <div>
+        <a href="#projects"><p>PROJECTS</p></a>
+      </div>
+      <div>
+        <a href="#about"><p>ABOUT</p></a>
+      </div>
+      <div>
+        <a href="#contact"><p>CONTACT</p></a>
+      </div>
+    </section>
+    <section id="hero">
+        <div class="hero-text">
+          <h3>
+            Hello, my name is
+          </h3>
+          <h1>
+            Patrick Fry
+          </h1>
+          <h3>
+            And I am a Frontend Developer
+            <br><br>
+          </h3>
+          <p>
+            Computer Science graduate with experience building 
+            web applications and software projects using Java, Python, 
+            and modern web technologies. I enjoy solving problems, designing 
+            responsive user interfaces, and turning ideas into functional, 
+            well-structured code.
+          </p>
+        </div>
+        <div>
+          <img src="assets/ME-Crop.jpeg" alt="Picture of Patrick" id="my-pic">
+        </div>
+    </section>
+    <section id="projects">
+
+      <!-- Title -->
+      <div class="section-title">
+        <h2>My Work</h2>
+        <div>
+          <hr class="section-divider">
+        </div>
+      </div>
+
+      <!-- Project 1 -->
+      <div class="project-row-alt">
+        <!-- <div class="project-card"> -->
+        <!-- <div class="project-card-colors"></div> -->
+        <img src="assets/Space-Invaders.png" alt="HER Pawn Game Picture" class="project-image">
+        <!-- </div> -->
+        <div class="project-text-alt">
+          <h2><i>Space Invaders Clone</i><br><br></h2>
+          <h3>
+            Led a group to create a clone of the iconic arcade game,
+            Space Invaders, using Java/JavaFX. This version uses a 
+            client/server to allow for online muliplayer!
+            <br><br>
+          </h3>
+          <h3 class="project-dark-text">
+            Java, JavaFX
+            <br><br>
+          </h3>
+          <a href="https://github.com/PatFry/SpaceInvaders" target="_blank">
+            <img src="assets/github-mark-white.png" alt="GitHub" width="24" height="24">
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-row">
+        <div class="project-text">
+          <h2>
+            <i>CAS Research</i>
+            <br><br>
+          </h2>
+          <h3>
+            Investigated how player density and field size influence a team's 
+            decision making and performance using a soccer simulation(STS2) 
+            created by EA.
+            <br><br>
+          </h3>
+          <h3 class="project-dark-text">
+            Python, Overleaf
+            <br><br>
+          </h3>
+          <a href="https://github.com/PatFry/CS423-Project-3" target="_blank">
+            <img src="assets/github-mark-white.png" alt="GitHub" width="24" height="24">
+          </a>
+        </div>
+        <!-- <div class="project-card"> -->
+        <!-- <div class="project-card-colors"></div> -->
+        <img src="assets/CAS-pic.png" alt="Soccer CAS Picture" class="project-image">
+        <!-- </div> -->
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-row-alt">
+        <!-- <div class="project-card"> -->
+        <!-- <div class="project-card-colors"></div> -->
+        <img src="assets/HER-pic.png" alt="HER Pawn Game Picture" class="project-image">
+        <!-- </div> -->
+        <div class="project-text-alt">
+          <h2>
+            <i>Hexapawn</i>
+            <br><br>
+          </h2>
+          <h3>
+            Developed a clone of a psuedo-AI Hexapawn bot. With only 3 pawns
+            each on a 3x3 board, play this bot in a simplified version of chess 
+            where it will learn until it eventually becomes unbeatable.
+            <br><br>
+          </h3>
+          <h3 class="project-dark-text">
+            Java, JavaFX
+            <br><br>
+          </h3>
+          <a href="https://github.com/PatFry/HER" target="_blank">
+            <img src="assets/github-mark-white.png" alt="GitHub" width="24" height="24">
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="section-title">
+        <h2>About Me</h2>
+        <div>
+          <hr class="section-divider">
+        </div>
+      </div>
+      <div class="about-row">
+        <div>
+          <img src="assets/ME-Crop.jpeg" alt="Picture of Patrick" id="my-pic">
+        </div>
+        <div class="about-text">
+          <p>
+            I was originally born in the Florida Panhandle and after
+            spending some time in Portales, NM, I decided to move to 
+            Albuqueruque to study computer science at UNM. In my free time 
+            I love to play my guitar and sand volleyball. Since graduating 
+            I have enjoyed teaching myself web development.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <form class="contact-form" onsubmit="return sendEmail();">
+        <div id="contact-text">
+          <h2><br>Let's work together!</h2>
+        </div>
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="name" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+        </div>
+        <input type="submit" id="submit" name="submit" value="Submit">
+      </form>
+      <div class="footer">
+        <div>
+          <p>Patrickfry3@gmail.com</p>
+        </div>
+        <div>
+          <a href="https://github.com/PatFry" target="_blank">
+            <img src="assets/github-mark-white.png" alt="GitHub" width="24" height="24">
+          </a>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

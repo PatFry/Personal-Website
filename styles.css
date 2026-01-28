@@ -175,6 +175,7 @@ a{
   align-items: center;
   text-align: center;
   min-height: 150vh;
+  scroll-margin-top: -18vw;
   gap: 5vw;
 }
 
@@ -199,15 +200,15 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   /* animation: breathe 10s linear infinite; */
 }
 
 .form-group{
-  width: 60%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 input,
@@ -218,8 +219,13 @@ textarea{
   color: rgb(240, 245, 243);
 }
 
-.contact-form input[type="submit"]{
+#submit{
+  cursor: pointer;
   animation: breathe-small 10s linear infinite;
+}
+
+#submit.big-button{
+  transform: scale(1.1);
 }
 
 .footer{
@@ -227,7 +233,7 @@ textarea{
   justify-content: space-between;
   align-items: center;
   aspect-ratio: 1/0.0625;
-  margin: 1vw 1vw 0vw 1vw;
+  margin: 1vw 2vw 0vw 2vw;
 }
 
 @keyframes breathe{

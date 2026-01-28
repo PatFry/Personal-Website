@@ -1,1 +1,1 @@
-This is the first website I have ever made. It is a personal portfolio containing my projects and a little about myself.
+This is the first website I have ever made. It is a personal portfolio containing my projects and a little about myself. Click [here](https://exquisite-lebkuchen-465176.netlify.app/) to visit the site for yourself!
